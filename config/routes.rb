@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+get 'about', to: 'pages#about'
+
+  get 'pages/credits'
+get 'credits', to: 'pages#credits'
+
   resources :transcriptions
+
+  root 'transcriptions#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
